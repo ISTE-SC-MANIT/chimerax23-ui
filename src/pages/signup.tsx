@@ -350,7 +350,7 @@ const SignUp: NextPage<ComponentProps> = ({
                       className={classes.logoIcon}
                     />
                   </IconButton>
-                  <IconButton
+                  {/* <IconButton
                     onClick={() =>
                       facebookLogin(
                         router,
@@ -367,7 +367,7 @@ const SignUp: NextPage<ComponentProps> = ({
                       height={60}
                       className={classes.logoIcon}
                     />
-                  </IconButton>
+                  </IconButton> */}
                 </Grid>
               </Box>
             </Form>
