@@ -138,11 +138,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 		cursor: 'pointer',
 		color: theme.palette.mode === 'light' ? 'black' : 'white',
 	},
-	label: {
-		color: '#0E8388 !important',
-	},
 	border: {
 		borderColor: '#0E8388 !important',
+	},
+	label: {
+		color: '#0E8388 !important',
 	},
 }));
 const VectorImg = (classes: any) => {
@@ -339,6 +339,7 @@ const Login: React.FC<ComponentProps> = ({
 										<Checkbox
 											value='remember'
 											onChange={() => setRemember(!remember)}
+											style={{ color: '#0E8388' }}
 										/>
 									}
 									label='Remember me'
