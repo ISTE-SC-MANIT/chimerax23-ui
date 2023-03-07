@@ -115,6 +115,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 	},
 	imageV: {
 		width: '100% !important',
+		animation: `$myEffect 3000ms ${theme.transitions.easing.easeInOut} infinite alternate`,
 	},
 	customButton: {
 		marginLeft: 'auto',

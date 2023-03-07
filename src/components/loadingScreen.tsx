@@ -32,10 +32,16 @@ const LoadingScreen: React.FunctionComponent<Props> = ({ loading }) => {
 				direction='column'
 			>
 				<Grid item>
-					<CircularProgress thickness={4} size={60} />
+					<CircularProgress
+						thickness={4}
+						size={60}
+						style={{ color: '#0E8388' }}
+					/>
 				</Grid>
 				<Grid item className={classes.load}>
-					<Typography variant='h3' align='center'></Typography>
+					<Typography variant='h3' align='center'>
+						Loading...
+					</Typography>
 				</Grid>
 			</Grid>
 		</section>

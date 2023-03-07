@@ -15,55 +15,54 @@ import Link from 'next/link';
 import { logout } from '../../Auth/logout';
 
 const useStyles = makeStyles((theme) => ({
-  title: {
-    flexGrow: 1,
-  },
+	title: {
+		flexGrow: 1,
+	},
 }));
 
 interface NavbarProps {
-  setOpen: Dispatch<SetStateAction<boolean>>;
-  setSuccessMessage: (message: string) => void;
-  setErrorMessage: (message: string) => void;
+	setOpen: Dispatch<SetStateAction<boolean>>;
+	setSuccessMessage: (message: string) => void;
+	setErrorMessage: (message: string) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
-  setOpen,
-  setSuccessMessage,
-  setErrorMessage,
+	setOpen,
+	setSuccessMessage,
+	setErrorMessage,
 }) => {
-  const classes = useStyles();
-  const router = useRouter();
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+	const classes = useStyles();
+	const router = useRouter();
+	const handleDrawerOpen = () => {
+		setOpen(true);
+	};
 
-  return (
-    <AppBar position='sticky'>
-      <Toolbar sx={{ backgroundColor: '#7638FF' }}>
-        <IconButton
-          edge='start'
-          color='inherit'
-          aria-label='menu'
-          onClick={handleDrawerOpen}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant='h6' className={classes.title}>
-          Chimera-X
-        </Typography>
+	return (
+		<AppBar position='sticky'>
+			<Toolbar sx={{ backgroundColor: '#0E8388' }}>
+				<IconButton
+					edge='start'
+					color='inherit'
+					aria-label='menu'
+					onClick={handleDrawerOpen}
+				>
+					<MenuIcon />
+				</IconButton>
+				<Typography variant='h6' className={classes.title}>
+					Chimera-X
+				</Typography>
 
-        <Button
-          color='inherit'
-          onClick={async () => {
-            // await logout();
-            router.push('/400');
-
-          }}
-        >
-          Log out
-        </Button>
-      </Toolbar>
-    </AppBar>
-  );
+				<Button
+					color='inherit'
+					onClick={async () => {
+						// await logout();
+						router.push('/400');
+					}}
+				>
+					Log out
+				</Button>
+			</Toolbar>
+		</AppBar>
+	);
 };
 export default Navbar;
