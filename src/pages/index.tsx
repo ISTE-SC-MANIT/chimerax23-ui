@@ -21,6 +21,7 @@ import Footer from '../components/footer/contact';
 import { About } from '../components/about';
 // import Sponsors from '../components/sponsors';
 import Prize from '../components/prize';
+
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
@@ -170,7 +171,7 @@ const VectorImg = () => {
 			<Box>
 				<Image
 					src={'/vectorlanding.png'}
-					alt="logo"
+					alt='logo'
 					width={window.innerWidth / 1.2}
 					height={window.innerWidth / 1.74}
 				/>
@@ -179,7 +180,7 @@ const VectorImg = () => {
 	}
 	return (
 		<Box>
-			<Image src={'/vectorlanding.png'} alt="logo" width={750} height={500} />
+			<Image src={'/vectorlanding.png'} alt='logo' width={750} height={500} />
 		</Box>
 	);
 };
@@ -204,16 +205,16 @@ const Landing: React.FC = () => {
 									? '/chimera-x logo black.png'
 									: '/chimera-x white.png'
 							}
-							width="300px"
-							height="125px"
-							alt="logo"
+							width='300px'
+							height='125px'
+							alt='logo'
 							onClick={() => router.push('/')}
 						/>
 					</Box>
 					<Box
-						display="flex"
-						alignItems="center"
-						justifyContent="center"
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
 						className={classes.rightNav}
 					>
 						<Fade in={true}>
@@ -222,14 +223,14 @@ const Landing: React.FC = () => {
 							</Box>
 						</Fade>
 						<Button
-							variant="contained"
+							variant='contained'
 							onClick={() => router.push('/login')}
 							className={classes.menuBtn}
 						>
 							Login
 						</Button>
 						<Button
-							variant="contained"
+							variant='contained'
 							onClick={() => router.push('/signup')}
 							className={classes.menuBtn}
 						>
@@ -238,15 +239,15 @@ const Landing: React.FC = () => {
 					</Box>
 					<Box className={classes.mobileDrawer}>
 						<IconButton
-							edge="start"
-							color="inherit"
-							aria-label="menu"
+							edge='start'
+							color='inherit'
+							aria-label='menu'
 							onClick={(event) => {
 								event.stopPropagation();
 								handleDrawerOpen();
 							}}
 						>
-							<MenuIcon fontSize="large" color="primary" />
+							<MenuIcon fontSize='large' color='primary' />
 						</IconButton>
 					</Box>
 				</Box>
@@ -257,19 +258,19 @@ const Landing: React.FC = () => {
 						item
 						xs={12}
 						md={4}
-						justifyContent="space-around"
-						alignItems="center"
-						direction="column"
+						justifyContent='space-around'
+						alignItems='center'
+						direction='column'
 						className={classes.prizeSection}
 					>
 						<Box className={classes.margin}>
-							<Typography variant="h4" align="center" className={classes.typo}>
+							<Typography variant='h4' align='center' className={classes.typo}>
 								<b>Central India&apos;s largest Quizzing Contest</b>
 							</Typography>
 						</Box>
 						<Box className={classes.margin}>
 							<Box marginBottom={5}>
-								<Typography variant="h5" align="center">
+								<Typography variant='h5' align='center'>
 									Prelims
 									<br />
 									21st March&apos; 2023
@@ -284,8 +285,8 @@ const Landing: React.FC = () => {
 								</Btn>
 								<Link
 									className={classes.Link}
-									target="_blank"
-									href="https://drive.google.com/file/d/18fYq_uSXg76WQ4Ov6BTZ4rjJFkwTXThV/view?usp=sharing"
+									target='_blank'
+									href='https://drive.google.com/file/d/18fYq_uSXg76WQ4Ov6BTZ4rjJFkwTXThV/view?usp=sharing'
 								>
 									How to get registered?
 								</Link>
@@ -296,6 +297,7 @@ const Landing: React.FC = () => {
 			</div>
 			<Prize />
 			{/* <Sponsors /> */}
+			<Footer></Footer>
 		</>
 	);
 };
