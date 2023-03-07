@@ -81,6 +81,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     radioBtn: {
       margin: 10,
+      color: '#0E8388 !important'
     },
     menuButton: {
 
@@ -117,17 +118,17 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(1),
       marginBottom: '6px',
       marginTop: '6px',
-      backgroundColor: '#7638FF'
+      backgroundColor: '#0E8388'
     },
     proceed_button: {
       width: 'fit-content',
       margin: 'auto',
       marginTop: theme.spacing(4),
       marginBottom: theme.spacing(2),
-      backgroundColor: '#7638FF',
+      backgroundColor: '#0E8388',
     },
     proceed_button_main: {
-      backgroundColor: '#7638FF',
+      backgroundColor: '#0E8388',
     },
     tab: {
       overflow: 'scroll',

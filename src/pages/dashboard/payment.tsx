@@ -127,7 +127,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     cursor: 'pointer',
   },
   payment_button: {
-    backgroundColor: '#7638FF',
+    backgroundColor: '#0E8388',
   }
 }));
 const VectorImg = () => {
@@ -434,6 +434,7 @@ const Payment: React.FC<ComponentProps> = ({
                     <ListItem>
                       <ListItemIcon>
                         <Checkbox
+                          sx={{color:'#0E8388'}}
                           color='primary'
                           onChange={() => setChecked(!checked)}
                           disabled={teamHelperDisable}
