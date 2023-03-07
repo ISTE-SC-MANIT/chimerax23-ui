@@ -77,7 +77,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 						},
 					}),
 					primary: {
-						main: '#7638FF',
+						main: '#0E8388',
 					},
 				},
 				typography: {
