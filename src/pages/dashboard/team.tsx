@@ -363,7 +363,6 @@ const Team: React.FC<ComponentProps> = ({
 														},
 													},
 												}}
-												InputLabelProps={{ className: `${classes.label}` }}
 											/>
 										)}
 									/>
