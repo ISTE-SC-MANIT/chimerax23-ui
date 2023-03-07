@@ -45,107 +45,90 @@ import { PayOrder } from '../../lib/mutations/PayOrderMutation';
 import { PayOrderMutation } from '../../__generated__/PayOrderMutation';
 
 const useStyles = makeStyles((theme: Theme) => ({
-	root: {
-		minHeight: '100vh',
-	},
-	image: {
-		// backgroundImage: `url('/paymentvector.png')`,
-		backgroundRepeat: 'no-repeat',
-		// backgroundColor:
-		//   theme.palette.mode === 'light'
-		//     ? theme.palette.grey[50]
-		//     : theme.palette.grey[800],
-		backgroundSize: 'cover',
-		backgroundPosition: 'center',
-		// [theme.breakpoints.down('md')]: {
-		// 	backgroundImage: `url('/signupmobile.png')`,
-		// },
-		[theme.breakpoints.down('xs')]: {
-			minHeight: '60vh',
-			// backgroundColor:
-			//   theme.palette.mode === 'light'
-			//     ? theme.palette.grey[50]
-			//     : theme.palette.grey[800],
-		},
-	},
-	paper: {
-		margin: theme.spacing(8, 4),
-		display: 'flex',
-		flexDirection: 'column',
-		alignItems: 'center',
-	},
-	avatar: {
-		margin: theme.spacing(1),
-		backgroundColor: theme.palette.secondary.main,
-	},
-	form: {
-		width: '100%', // Fix IE11 issue.
-		marginTop: theme.spacing(1),
-	},
-	submit: {
-		margin: theme.spacing(3, 0, 2),
-	},
-	title: {
-		flexGrow: 1,
-	},
-	menuButton: {
-		marginRight: theme.spacing(2),
-	},
-	heading: {
-		textAlign: 'center',
-		width: 'fit-content',
-		margin: 'auto',
-		marginTop: theme.spacing(3),
-		marginBottom: theme.spacing(2),
-	},
-	Backcolor: {
-		// backgroundColor:
-		//   theme.palette.mode === 'light' ? 'white' : theme.palette.grey[800],
-	},
-	input: {
-		width: '50%',
-		marginLeft: 20,
-		'& .MuiOutlinedInput-input:focused': {
-			borderColor: 'green',
-		},
-		'& .MuiOutlinedInput-root': {
-			'&:hover fieldset': {
-				borderColor: '#0E8388',
-			},
-		},
-	},
-	box: {
-		paddingLeft: 20,
-		marginBottom: theme.spacing(2),
-	},
-	button: {
-		width: 'fit-content',
-		margin: 'auto',
-	},
-	listItem: {
-		marginBottom: 0,
-	},
-	leftGrid: {
-		[theme.breakpoints.up('md')]: {
-			paddingLeft: theme.spacing(8),
-		},
-	},
-	link: {
-		cursor: 'pointer',
-		color: '#0E8388',
-		// underlineColor: 'green',
-		textDecoration: 'none',
-	},
-	payment_button: {
-		backgroundColor: '#0E8388',
-		'&:hover': {
-			background: 'none',
-			color: '#0E8388',
-		},
-	},
-	label: {
-		color: '#0E8388 !important',
-	},
+  root: {
+    minHeight: '100vh',
+  },
+  image: {
+    backgroundImage: `url('/paymentvector.png')`,
+    backgroundRepeat: 'no-repeat',
+    // backgroundColor:
+    //   theme.palette.mode === 'light'
+    //     ? theme.palette.grey[50]
+    //     : theme.palette.grey[800],
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    [theme.breakpoints.down('md')]: {
+      backgroundImage: `url('/signupmobile.png')`,
+
+    },
+    [theme.breakpoints.down('xs')]: {
+      minHeight: '60vh',
+      // backgroundColor:
+      //   theme.palette.mode === 'light'
+      //     ? theme.palette.grey[50]
+      //     : theme.palette.grey[800],
+    },
+  },
+  paper: {
+    margin: theme.spacing(8, 4),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE11 issue.
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  heading: {
+    textAlign: 'center',
+    width: 'fit-content',
+    margin: 'auto',
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(2),
+  },
+  Backcolor: {
+    // backgroundColor:
+    //   theme.palette.mode === 'light' ? 'white' : theme.palette.grey[800],
+  },
+  input: {
+    width: '50%',
+    marginLeft: 20,
+  },
+  box: {
+    paddingLeft: 20,
+    marginBottom: theme.spacing(2),
+  },
+  button: {
+    width: 'fit-content',
+    margin: 'auto',
+  },
+  listItem: {
+    marginBottom: 0,
+  },
+  leftGrid: {
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: theme.spacing(8),
+    },
+  },
+  link: {
+    cursor: 'pointer',
+  },
+  payment_button: {
+    backgroundColor: '#7638FF',
+  }
 }));
 const VectorImg = () => {
 	const theme = useTheme();
@@ -427,99 +410,98 @@ const Payment: React.FC<ComponentProps> = ({
 							</Box>
 						)}
 
-						<Divider></Divider>
-						<Box>
-							<ListItem alignItems='flex-start'>
-								<ListItemText
-									primary='Complete your payment'
-									primaryTypographyProps={{ variant: 'h6' }}
-								/>
-							</ListItem>
-						</Box>
-						<Box>
-							<RazorpayImg />
-						</Box>
-						<Box>
-							<Grid container className={classes.box} alignItems='center'>
-								<Grid item xs={6}>
-									<Typography variant='h6'>
-										<b>AMOUNT</b>&nbsp;
-									</Typography>
-								</Grid>
-								<Grid item xs={6}>
-									<Typography variant='h6'>
-										<b> ₹ 100 </b>
-									</Typography>
-								</Grid>
-							</Grid>
-							<Grid container alignItems='center'>
-								<Grid item xs={12}>
-									<Box>
-										<ListItem>
-											<ListItemIcon>
-												<Checkbox
-													style={{ color: '#0E8388' }}
-													onChange={() => setChecked(!checked)}
-													disabled={teamHelperDisable}
-												/>
-											</ListItemIcon>
-											<ListItemText
-												primary={
-													<>
-														I agree to the{' '}
-														<Link
-															className={classes.link}
-															onClick={() => setOpenDialog(true)}
-														>
-															Terms and Condition
-														</Link>{' '}
-														of ISTE-SC-MANIT{' '}
-													</>
-												}
-											/>
-										</ListItem>
-										{viewer.role === 'TEAM_HELPER' && (
-											<Box className={classes.box}>
-												<Typography>
-													Please ask your team leader to complete payment
-												</Typography>
-											</Box>
-										)}
-									</Box>
-								</Grid>
-								<Grid item xs={12}>
-									<Box className={classes.box}>
-										<Button
-											color='primary'
-											variant='contained'
-											onClick={handleRazorpay}
-											disabled={disable}
-											className={classes.payment_button}
-										>
-											Proceed for payment
-										</Button>
-									</Box>
-								</Grid>
-							</Grid>
-						</Box>
-					</Grid>
-					<Grid
-						item
-						container
-						// xs={12}
-						sm={5}
-						// md={6}
-						marginTop={'4rem'}
-						className={classes.image}
-						justifyContent='center'
-						// alignItems='flex-end'
-					>
-						<VectorImg />
-					</Grid>
-				</Grid>
-			</div>
-		</>
-	);
+            <Divider></Divider>
+            <Box>
+              <ListItem alignItems='flex-start'>
+                <ListItemText
+                  primary='Complete your payment'
+                  primaryTypographyProps={{ variant: 'h6' }}
+                />
+              </ListItem>
+            </Box>
+            <Box>
+              <RazorpayImg />
+            </Box>
+            <Box>
+              <Grid container className={classes.box} alignItems='center'>
+                <Grid item xs={6}>
+                  <Typography variant='h6'>
+                    <b>AMOUNT</b>&nbsp;
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant='h6'>
+                    <b> ₹ 100 </b>
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container alignItems='center'>
+                <Grid item xs={12}>
+                  <Box>
+                    <ListItem>
+                      <ListItemIcon>
+                        <Checkbox
+                          color='primary'
+                          onChange={() => setChecked(!checked)}
+                          disabled={teamHelperDisable}
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={
+                          <>
+                            I agree to the{' '}
+                            <Link
+                              className={classes.link}
+                              onClick={() => setOpenDialog(true)}
+                            >
+                              Terms and Condition
+                            </Link>{' '}
+                            of ISTE-SC-MANIT{' '}
+                          </>
+                        }
+                      />
+                    </ListItem>
+                    {viewer.role === 'TEAM_HELPER' && (
+                      <Box className={classes.box}>
+                        <Typography>
+                          Please ask your team leader to complete payment
+                        </Typography>
+                      </Box>
+                    )}
+                  </Box>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box className={classes.box}>
+                    <Button
+                      color='primary'
+                      variant='contained'
+                      onClick={handleRazorpay}
+                      disabled={disable}
+                      className={classes.payment_button}
+                    >
+                      Proceed for payment
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            container
+            xs={12}
+            sm={4}
+            md={6}
+            className={classes.image}
+            justifyContent='center'
+            alignItems='flex-end'
+          >
+            <VectorImg />
+          </Grid>
+        </Grid>
+      </div>
+    </>
+  );
 };
 
 export default Payment;

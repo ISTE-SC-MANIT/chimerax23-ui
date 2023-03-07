@@ -62,90 +62,84 @@ class Amount extends Component {
 }
 
 const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		root: {
-			margin: 0,
-			padding: 0,
-			boxSizing: 'border-box',
-			minheight: '100vh',
-		},
-		leftGrid: {
-			[theme.breakpoints.up('sm')]: {
-				paddingLeft: theme.spacing(8),
-			},
-		},
-		header: {
-			[theme.breakpoints.down('sm')]: {
-				paddingLeft: theme.spacing(3),
-			},
-		},
-		radioBtn: {
-			margin: 10,
-			color: '#0E8388 !important',
-		},
-		menuButton: {
-			// marginRight: theme.spacing(2),
-		},
-		title: {
-			flexGrow: 1,
-		},
-		paper: {
-			height: '100%',
-		},
-		container: {
-			height: window.outerHeight + 60,
-			// height: window.outerHeight,
-			[theme.breakpoints.down('sm')]: {
-				height: 'auto',
-				paddingBottom: theme.spacing(2),
-			},
-		},
-		dashboardImg: {
-			width: '80%',
-			[theme.breakpoints.down('sm')]: {
-				width: '40%',
-			},
-		},
+  createStyles({
+    root: {
+      margin: 0,
+      padding: 0,
+      boxSizing: 'border-box',
+      minheight: '100vh',
+    },
+    leftGrid: {
+      [theme.breakpoints.up('sm')]: {
+        paddingLeft: theme.spacing(8),
+      },
+    },
+    header: {
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: theme.spacing(3),
+      },
+    },
+    radioBtn: {
+      margin: 10,
+    },
+    menuButton: {
 
-		Head_title: {
-			fontSize: '2.4rem',
-			// textAlign: 'center',
-			// margin: 'auto',
-		},
-		invitation_button: {
-			marginLeft: theme.spacing(2),
-			marginRight: theme.spacing(1),
-			marginBottom: '6px',
-			marginTop: '6px',
-			backgroundColor: '#0E8388',
-		},
-		proceed_button: {
-			width: 'fit-content',
-			margin: 'auto',
-			marginTop: theme.spacing(4),
-			marginBottom: theme.spacing(2),
-			backgroundColor: '#0E8388',
-		},
-		proceed_button_main: {
-			backgroundColor: '#0E8388',
-			'&:hover': {
-				background: 'none',
-			},
-		},
-		tab: {
-			overflow: 'scroll',
-			// color: theme.palette.mode === 'light' ? 'black' : 'white'
-		},
-		note: {
-			padding: theme.spacing(8),
-			[theme.breakpoints.down('sm')]: {
-				padding: theme.spacing(5),
-			},
-		},
-		label: {
-			color: '#0E8388 !important',
-		},
-	})
+      // marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+    paper: {
+      height: '100%',
+    },
+    container: {
+      height: window.outerHeight + 60,
+      // height: window.outerHeight,
+      [theme.breakpoints.down('sm')]: {
+        height: 'auto',
+        paddingBottom: theme.spacing(2),
+      },
+    },
+    dashboardImg: {
+      width: '80%',
+      [theme.breakpoints.down('sm')]: {
+        width: '40%',
+      },
+    },
+
+    Head_title: {
+      fontSize: '2.4rem',
+      // textAlign: 'center',
+      // margin: 'auto',
+    },
+    invitation_button: {
+      marginLeft: theme.spacing(2),
+      marginRight: theme.spacing(1),
+      marginBottom: '6px',
+      marginTop: '6px',
+      backgroundColor: '#7638FF'
+    },
+    proceed_button: {
+      width: 'fit-content',
+      margin: 'auto',
+      marginTop: theme.spacing(4),
+      marginBottom: theme.spacing(2),
+      backgroundColor: '#7638FF',
+    },
+    proceed_button_main: {
+      backgroundColor: '#7638FF',
+    },
+    tab: {
+      overflow: 'scroll',
+      // color: theme.palette.mode === 'light' ? 'black' : 'white'
+    },
+    note: {
+      padding: theme.spacing(8),
+      [theme.breakpoints.down('sm')]: {
+        padding: theme.spacing(5),
+      },
+    },
+  })
 );
 
 interface userInfo {
