@@ -5,6 +5,7 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
+import { StepIcon } from '@mui/material';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
@@ -15,6 +16,18 @@ const useStyles = makeStyles((theme: Theme) =>
 		root: {
 			width: '100%',
 			marginLeft: '22px',
+		},
+		'.&MuiStepIcon-root-53.MuiStepIcon-active-54 .MuiStepIcon-text-54': {
+			fill: '#034691 !important',
+		},
+		'.&css-1samo4r-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed': {
+			color: 'red !important',
+		},
+		'.&MuiSvgIcon-root': {
+			color: 'green !important',
+		},
+		'.&MuiSvgIcon-root-MuiStepIcon-root': {
+			color: 'green !important',
 		},
 		button: {
 			marginTop: theme.spacing(1),
