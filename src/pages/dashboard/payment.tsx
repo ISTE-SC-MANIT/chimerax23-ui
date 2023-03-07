@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		},
 	},
 	label: {
-		color: '#0E8388 !important',
+		color: ' !important',
 	},
 }));
 const VectorImg = () => {
