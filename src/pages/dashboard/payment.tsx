@@ -353,7 +353,6 @@ const Payment: React.FC<ComponentProps> = ({
 										},
 									},
 								}}
-								InputLabelProps={{ className: `${classes.label}` }}
 							/>
 							<TextField
 								// fullWidth
@@ -374,7 +373,6 @@ const Payment: React.FC<ComponentProps> = ({
 										: "If you don't have any referral code , Please leave this field blank"
 								}
 								sx={{}}
-								InputLabelProps={{ className: `${classes.label}` }}
 							/>
 						</Box>
 						<Divider></Divider>
