@@ -170,8 +170,6 @@ const VectorImg = () => {
 		return (
 			<Box>
 				<Image
-					src={'/vectorlanding.png'}
-					alt='logo'
 					src={'/NewUI/landing1.svg'}
 					alt='logo'
 					width={window.innerWidth / 1.2}
@@ -182,7 +180,6 @@ const VectorImg = () => {
 	}
 	return (
 		<Box>
-			<Image src={'/vectorlanding.png'} alt='logo' width={750} height={500} />
 			<Image src={'/NewUI/landing1.svg'} alt='logo' width={750} height={500} />
 		</Box>
 	);
