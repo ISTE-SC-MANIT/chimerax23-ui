@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
 	const theme = useTheme();
 
 	return (
-		<footer style={{ backgroundColor: '#0E8388', marginTop: '3rem' }}>
+		<footer style={{ marginTop: '3rem' }}>
 			<ScrollDialog
 				openDialog={openDialog}
 				onClose={() => setOpenDialog(false)}
