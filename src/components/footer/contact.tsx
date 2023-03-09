@@ -17,6 +17,7 @@ import { Grid, Box, Container } from '@mui/material';
 import ScrollDialog from './terms';
 import PrivacyDialog from './privacy';
 import RefundDialog from './refund';
+import PriceDetail from './price';
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, useTheme } from '@mui/material/styles';
 
@@ -101,6 +102,7 @@ const Footer: React.FC = () => {
 	const [openDialog, setOpenDialog] = React.useState(false);
 	const [openPrivacy, setOpenPrivacy] = React.useState(false);
 	const [openRefund, setOpenRefund] = React.useState(false);
+	const [openPrice, setOpenPrice] = React.useState(false);
 	const classes = useStyles();
 	const theme = useTheme();
 
@@ -118,6 +120,7 @@ const Footer: React.FC = () => {
 				openDialog={openRefund}
 				onClose={() => setOpenRefund(false)}
 			/>
+			<PriceDetail openDialog={openPrice} onClose={() => setOpenPrice(false)} />
 			<Container maxWidth='lg'>
 				<Grid
 					container
@@ -310,6 +313,12 @@ const Footer: React.FC = () => {
 							className={classes.footerPrivacyA}
 						>
 							<li className={classes.footerPrivacyli}>Privacy Policy</li>
+						</a>
+						<a
+							onClick={() => setOpenPrice(true)}
+							className={classes.footerPrivacyA}
+						>
+							<li className={classes.footerPrivacyli}>Price Details</li>
 						</a>
 					</ul>
 				</Box>
