@@ -205,7 +205,7 @@ const Landing: React.FC = () => {
 									? '/chimera-x logo black.png'
 									: '/chimera-x white.png'
 							}
-							width='300px'
+							width='400px'
 							height='125px'
 							alt='logo'
 							onClick={() => router.push('/')}

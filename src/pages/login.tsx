@@ -187,6 +187,8 @@ const Login: React.FC<ComponentProps> = ({
 	const [status, setStatus] = React.useState<Status>(Status.IDLE);
 	const [remember, setRemember] = React.useState(true);
 	const router = useRouter();
+	const theme = useTheme();
+
 	const [loading, setLoading] = React.useState(false);
 
 	const handleShowPassword = () => {
@@ -223,7 +225,11 @@ const Login: React.FC<ComponentProps> = ({
 					<Box className={classes.logo}>
 						<Image
 							className={classes.link}
-							src='/ChimeraX-logo-white.svg'
+							src={
+								theme.palette.mode === 'light'
+									? '/chimera-x logo black.png'
+									: '/chimera-x white.png'
+							}
 							alt='logo'
 							width={400}
 							height={104}
