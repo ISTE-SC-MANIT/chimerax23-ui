@@ -491,8 +491,8 @@ const Payment: React.FC<ComponentProps> = ({
 											color='primary'
 											variant='contained'
 											onClick={handleRazorpay}
-											disabled={!checked}
-											// disabled={true}
+											// disabled={!checked}
+											disabled={true}
 											className={classes.payment_button}
 										>
 											Proceed for payment
