@@ -277,11 +277,7 @@ const Landing: React.FC = () => {
 								</Typography>
 							</Box>
 							<Box className={classes.flexColumn} lineHeight={2}>
-								<Btn
-									onClick={() => router.push('/signup')}
-								>
-									Register Now
-								</Btn>
+								<Btn onClick={() => router.push('/signup')}>Register Now</Btn>
 								<Link
 									className={classes.Link}
 									target='_blank'
@@ -294,6 +290,7 @@ const Landing: React.FC = () => {
 					</Grid>
 				</Grid>
 			</div>
+			<About />
 			<Prize />
 			{/* <Sponsors /> */}
 			<Footer></Footer>

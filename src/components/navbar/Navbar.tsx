@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({
 			<Toolbar sx={{ backgroundColor: '#0E8388' }}>
 				<IconButton
 					edge='start'
-					color='inherit'
+					// color='inherit'
 					aria-label='menu'
 					onClick={handleDrawerOpen}
 				>
@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({
 				</Typography>
 
 				<Button
-					color='inherit'
+					// color='inherit'
 					onClick={async () => {
 						// await logout();
 						router.push('/400');
