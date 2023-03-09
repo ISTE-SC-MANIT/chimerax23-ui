@@ -10,7 +10,6 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
-import { createTheme } from '@mui/material';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			marginLeft: '22px',
 		},
 		'.&MuiStepIcon-root-53.MuiStepIcon-active-54 .MuiStepIcon-text-54': {
-			fill: '#0E8388 !important',
+			fill: '#034691 !important',
 		},
 		'.&css-1samo4r-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed': {
 			color: 'red !important',
@@ -72,7 +71,6 @@ function getStepContent(step: number) {
 
 export default function VerticalStepper() {
 	const classes = useStyles();
-
 	const [activeStep, setActiveStep] = React.useState(0);
 	const steps = getSteps();
 	const router = useRouter();

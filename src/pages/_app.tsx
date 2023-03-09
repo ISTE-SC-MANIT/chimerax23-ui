@@ -79,9 +79,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 					primary: {
 						main: '#0E8388',
 					},
-					secondary: {
-						main: '#0E8388',
-					},
 				},
 				typography: {
 					fontFamily: ['Nunito', 'Montserrat', 'Roboto', 'sans-serif'].join(
