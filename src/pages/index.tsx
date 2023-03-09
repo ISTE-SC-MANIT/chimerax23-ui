@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 		menuBtn: {
 			backgroundColor: 'white',
-			color: '#7638FF',
+			color: '#0E8388',
 			marginRight: theme.spacing(1),
 			'&:hover': {
 				backgroundColor: 'white',
@@ -157,7 +157,7 @@ const Btn = withStyles((theme) => ({
 		borderRadius: '25px',
 		padding: '10px 20px',
 		'&:hover': {
-			backgroundColor: '#7638FF',
+			backgroundColor: '#0E8388',
 			color: 'white',
 		},
 	},
@@ -278,7 +278,6 @@ const Landing: React.FC = () => {
 							</Box>
 							<Box className={classes.flexColumn} lineHeight={2}>
 								<Btn
-									sx={{ color: '#7638FF' }}
 									onClick={() => router.push('/signup')}
 								>
 									Register Now
