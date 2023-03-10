@@ -77,7 +77,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 						},
 					}),
 					primary: {
-						main: '#7638FF',
+						main: '#0E8388',
+					},
+					secondary: {
+						main: '#0E8388',
 					},
 				},
 				typography: {
@@ -166,7 +169,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 									}}
 									autoHideDuration={3000}
 								>
-									<Alert onClose={handleClose} severity="success">
+									<Alert onClose={handleClose} severity='success'>
 										{successMsg}
 									</Alert>
 								</Snackbar>
@@ -178,7 +181,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 									}}
 									autoHideDuration={3000}
 								>
-									<Alert onClose={handleClose} severity="error">
+									<Alert onClose={handleClose} severity='error'>
 										{errorMsg}
 									</Alert>
 								</Snackbar>

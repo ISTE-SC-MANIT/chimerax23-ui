@@ -18,6 +18,7 @@ import ScrollDialog from './terms';
 import PrivacyDialog from './privacy';
 import RefundDialog from './refund';
 import PriceDetail from './price';
+import Price from './price';
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, useTheme } from '@mui/material/styles';
 
@@ -121,6 +122,7 @@ const Footer: React.FC = () => {
 				onClose={() => setOpenRefund(false)}
 			/>
 			<PriceDetail openDialog={openPrice} onClose={() => setOpenPrice(false)} />
+			<Price openDialog={openPrice} onClose={() => setOpenPrice(false)} />
 			<Container maxWidth='lg'>
 				<Grid
 					container

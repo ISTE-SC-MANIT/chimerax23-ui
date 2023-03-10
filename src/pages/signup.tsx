@@ -193,6 +193,7 @@ const SignUp: NextPage<ComponentProps> = ({
 	const [loading, setloading] = React.useState(false);
 	const [status, setStatus] = React.useState<Status>(Status.IDLE);
 	const [visible, setVisible] = React.useState(false);
+	const theme = useTheme();
 	const [formValues, setFormValues] = React.useState<FormValues>({
 		fullName: '',
 		email: '',
@@ -424,7 +425,11 @@ const SignUp: NextPage<ComponentProps> = ({
 				<Box className={classes.logo}>
 					<Image
 						// className={classes.link}
-						src='/ChimeraX-logo-white.svg'
+						src={
+							theme.palette.mode === 'light'
+								? '/chimera-x logo black.png'
+								: '/chimera-x white.png'
+						}
 						alt='logo'
 						width={400}
 						height={104}
