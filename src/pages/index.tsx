@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 		menuBtn: {
 			backgroundColor: 'white',
-			color: '#7638FF',
+			color: '#0E8388',
 			marginRight: theme.spacing(1),
 			'&:hover': {
 				backgroundColor: 'white',
@@ -157,7 +157,7 @@ const Btn = withStyles((theme) => ({
 		borderRadius: '25px',
 		padding: '10px 20px',
 		'&:hover': {
-			backgroundColor: '#7638FF',
+			backgroundColor: '#0E8388',
 			color: 'white',
 		},
 	},
@@ -205,7 +205,7 @@ const Landing: React.FC = () => {
 									? '/chimera-x logo black.png'
 									: '/chimera-x white.png'
 							}
-							width='300px'
+							width='400px'
 							height='125px'
 							alt='logo'
 							onClick={() => router.push('/')}
@@ -277,12 +277,7 @@ const Landing: React.FC = () => {
 								</Typography>
 							</Box>
 							<Box className={classes.flexColumn} lineHeight={2}>
-								<Btn
-									sx={{ color: '#7638FF' }}
-									onClick={() => router.push('/signup')}
-								>
-									Register Now
-								</Btn>
+								<Btn onClick={() => router.push('/signup')}>Register Now</Btn>
 								<Link
 									className={classes.Link}
 									target='_blank'
@@ -295,6 +290,7 @@ const Landing: React.FC = () => {
 					</Grid>
 				</Grid>
 			</div>
+			<About />
 			<Prize />
 			{/* <Sponsors /> */}
 			<Footer></Footer>

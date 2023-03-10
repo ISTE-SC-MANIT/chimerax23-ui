@@ -129,7 +129,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		backgroundColor: '#7638FF',
 	},
 	label: {
-		color: '#0E8388 !important',
+		color: ' !important',
 	},
 }));
 const VectorImg = () => {
@@ -357,6 +357,7 @@ const Payment: React.FC<ComponentProps> = ({
 										? ''
 										: "If you don't have any referral code , Please leave this field blank"
 								}
+								sx={{}}
 							/>
 						</Box>
 						<Divider></Divider>
@@ -475,7 +476,8 @@ const Payment: React.FC<ComponentProps> = ({
 											color='primary'
 											variant='contained'
 											onClick={handleRazorpay}
-											disabled={disable}
+											// disabled={!checked}
+											disabled={true}
 											className={classes.payment_button}
 										>
 											Proceed for payment
