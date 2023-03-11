@@ -44,6 +44,8 @@ import {
 import { PayOrder } from '../../lib/mutations/PayOrderMutation';
 import { PayOrderMutation } from '../../__generated__/PayOrderMutation';
 
+import PaymentModal from '../../components/paymentModal';
+
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		minHeight: '100vh',
@@ -146,6 +148,35 @@ const useStyles = makeStyles((theme: Theme) => ({
 	label: {
 		color: ' !important',
 	},
+	modalroot: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		justifyContent: 'space-evenly',
+		maxWidth: '400px',
+		height: '70vh',
+		zIndex: '1000',
+		position: 'fixed',
+		top: '15%',
+		left: '0',
+		right:'0',
+		marginInline: 'auto',
+		backgroundColor: 'white',
+		'@media(minWidth: 800px)':{
+			width:'80%',
+			left:'10%'
+		},
+	},
+	payementQR: {
+		width: '100px',
+		height: '100px',
+	},
+
+	spanText: {
+		textAlign: 'center',
+		color: 'black',
+		padding: '5%'
+	}
 }));
 const VectorImg = () => {
 	const theme = useTheme();
@@ -173,7 +204,7 @@ const RazorpayImg = () => {
 	const theme = useTheme();
 	const source =
 		theme.palette.mode === 'light' ? '/razorpay.png' : '/razorpay-dark.png';
-	return <img src={source} width='180px' className={classes.box} />;
+	return <></>
 };
 const Payment: React.FC<ComponentProps> = ({
 	viewer,
@@ -187,6 +218,9 @@ const Payment: React.FC<ComponentProps> = ({
 	const [teamName, setTeamName] = React.useState('');
 	const [referralCode, setReferralCode] = React.useState('');
 	const [checked, setChecked] = React.useState(false);
+
+	const[modalVisible, setModalVisible]=React.useState(false);
+
 	const router = useRouter();
 
 	React.useEffect(() => {
@@ -274,6 +308,10 @@ const Payment: React.FC<ComponentProps> = ({
 			},
 		});
 	};
+
+	const setModalView=()=>{
+		setModalVisible(!modalVisible);
+	}
 
 	const disable =
 		!Boolean(teamName) ||
@@ -490,9 +528,9 @@ const Payment: React.FC<ComponentProps> = ({
 										<Button
 											color='primary'
 											variant='contained'
-											onClick={handleRazorpay}
-											// disabled={!checked}
-											disabled={true}
+											onClick={setModalView}
+											disabled={!checked}
+											// disabled={true}
 											className={classes.payment_button}
 										>
 											Proceed for payment
@@ -517,6 +555,25 @@ const Payment: React.FC<ComponentProps> = ({
 					</Grid>
 				</Grid>
 			</div>
+			{modalVisible && checked && <Box className={classes.modalroot}>
+				<Box>
+					<Image
+						src='/NewUI/paymentQR.jpeg'
+						alt='logo'
+						width="200px"
+						height="200px"
+					/>
+				</Box>
+				<span className={classes.spanText}>
+					Please scan the QR and pay. We will approve your payment and reach out soon.
+					Enter your email and team name in UPI remarks message. 
+					Example <br/> 
+					Team Name: ABXY <br/>
+					Email: tester@test.com
+
+				</span>
+				<Button onClick={setModalView}>Close</Button>
+			</Box>}
 		</>
 	);
 };

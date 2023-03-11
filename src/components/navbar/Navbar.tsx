@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({
 				</Typography>
 
 				<Button
-					// color='inherit'
+					color='inherit'
 					onClick={async () => {
 						// await logout();
 						router.push('/400');
