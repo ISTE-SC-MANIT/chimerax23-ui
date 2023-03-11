@@ -369,6 +369,24 @@ const SignUp: NextPage<ComponentProps> = ({
 									? `Submitting...`
 									: `Create new account`}
 							</Button>
+							<Button
+								type='submit'
+								fullWidth
+								variant='contained'
+								className={classes.submit}
+								color='primary'
+								disabled={!status}
+								sx={{
+									backgroundColor: 'white',
+									color: '#0E8388',
+									border: 'none',
+									'&:hover': { background: 'none', color: '#0E8388' },
+								}}
+								onClick={() => router.push('/login')}
+							>
+								One of Us? Login
+							</Button>
+							
 							<Box mt={5}>
 								{' '}
 								<Typography align='center' variant='subtitle1'>
@@ -435,21 +453,7 @@ const SignUp: NextPage<ComponentProps> = ({
 						height={104}
 						onClick={() => router.push('/')}
 					/>
-					{/* <Typography textAlign={'center'}>One of Us..</Typography>s */}
-					{/* <LoginButton
-						sx={{ color: 'white', backgroundColor: '#0E8388' }}
-						onClick={() => router.push('/login')}
-					>
-						Log In
-					</LoginButton> */}
-					{/* <Typography
-						component='span'
-						variant='h3'
-						color='inherit'
-						className={classes.imageTitle2}
-					>
-						One of us?
-					</Typography> */}
+
 				</Box>
 				{/* <Box className={classes.loginBtn}> */}
 				{/* <Grid container justifyContent='center' alignItems='center'> */}
