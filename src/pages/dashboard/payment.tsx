@@ -565,8 +565,8 @@ const Payment: React.FC<ComponentProps> = ({
 					</Box>
 					<span className={classes.spanText}>
 						Please scan the QR and pay. We will approve your payment and reach
-						out soon. Enter your email and team name in UPI remarks message.
-						Example <br />
+						out soon. Enter <b>TEAM LEADER</b> email and
+						<b> team name </b> in UPI remarks message. Example <br />
 						Team Name: ABXY <br />
 						Email: tester@test.com
 					</span>
