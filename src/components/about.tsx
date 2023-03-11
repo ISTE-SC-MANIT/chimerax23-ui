@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 const useStyles = makeStyles((theme: Theme) => ({
 	abb: {
-		backgroundColor: theme.palette.mode === 'light' ? '#ECF0F6' : '#0A1929',
+		backgroundColor: theme.palette.mode === 'light' ? '#ebf2f2' : '#0e1111',
 		// padding: theme.spacing(6),
 		paddingLeft: '4rem',
 		[theme.breakpoints.down('md')]: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 	},
 	root: {
 		minHeight: '100vh',
-		backgroundColor: theme.palette.mode === 'light' ? '#ECF0F6' : '#0A1929',
+		backgroundColor: theme.palette.mode === 'light' ? '#ebf2f2' : '#0e1111',
 		padding: theme.spacing(3),
 	},
 	container: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		justifyContent: 'space-around',
 		alignItems: 'center',
 		textAlign: 'center',
-		backgroundColor: theme.palette.mode === 'light' ? '#ECF0F6' : '#0A1929',
+		backgroundColor: theme.palette.mode === 'light' ? '#ebf2f2' : '#0e1111',
 		// width: '93%',
 		marginLeft: 'auto',
 		marginRight: 'auto',

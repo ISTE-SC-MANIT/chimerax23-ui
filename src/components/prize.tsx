@@ -8,12 +8,12 @@ const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
 			minHeight: '100vh',
-			backgroundColor: theme.palette.mode === 'light' ? '#ECF0F6' : '#0A1929',
+			backgroundColor: theme.palette.mode === 'light' ? '#ebf2f2' : '#0e1111',
 			padding: theme.spacing(3),
 		},
 		card: {
 			padding: '40px',
-			backgroundColor: theme.palette.mode === 'light' ? 'white' : '#0A1929',
+			backgroundColor: theme.palette.mode === 'light' ? '#ebf2f2' : '#0e1111',
 			display: 'flex',
 			flexDirection: 'column',
 			alignItems: 'center',
