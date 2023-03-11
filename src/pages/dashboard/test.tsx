@@ -123,6 +123,7 @@ const Test: React.FC<ComponentProps> = ({
 						// disabled={disableButton}
 						variant='contained'
 						color='primary'
+						disabled
 					>
 						Start Quiz
 					</Button>
