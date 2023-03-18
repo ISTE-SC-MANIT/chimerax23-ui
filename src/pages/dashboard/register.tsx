@@ -241,7 +241,7 @@ const Register: React.FC<ComponentProps> = ({
 					<ListItemText
 						primary={' Step-1 Registration'}
 						primaryTypographyProps={{ variant: 'h4', align: 'center' }}
-						secondary={`Register now to be a part of ISTE's multi city quiz competition: ChimeraX22`}
+						secondary={`Register now to be a part of ISTE's multi city quiz competition: ChimeraX23`}
 						secondaryTypographyProps={{
 							className: `${classes.subHeading}`,
 							align: 'center',

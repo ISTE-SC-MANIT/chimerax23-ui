@@ -273,7 +273,7 @@ const Landing: React.FC = () => {
 								<Typography variant='h5' align='center'>
 									Prelims
 									<br />
-									21st March&apos; 2023
+									31st March / 1st April&apos; 2023
 								</Typography>
 							</Box>
 							<Box className={classes.flexColumn} lineHeight={2}>
