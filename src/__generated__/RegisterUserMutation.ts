@@ -16,6 +16,7 @@ export interface RegisterUserMutation_registerUser {
   email: string;
   phone: string;
   college: string | null;
+  referralCode: string | null;
   strategy: string;
 }
 

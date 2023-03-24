@@ -33,6 +33,10 @@ const validationSchema = yup.object({
 		.string()
 
 		.required('College cannot be empty'),
+
+	referralCode: yup
+		.string(),
+
 	email: yup
 		.string()
 		.email('Provide a valid Email ID')
@@ -184,6 +188,7 @@ const Register: React.FC<ComponentProps> = ({
 		name: viewer.name,
 		email: viewer.email,
 		college: '',
+		referralCode: '',
 		phone: '',
 		year: 1,
 		country: '',
@@ -199,9 +204,9 @@ const Register: React.FC<ComponentProps> = ({
 			}${values.phone}`,
 			year: values.year,
 			college: values.college,
-			city: currentCity,
+			referralCode: values.referralCode,
+			city: currentCity
 		};
-
 		mutateFunction({
 			variables: { input: userInput },
 			onCompleted: () => {
@@ -338,6 +343,35 @@ const Register: React.FC<ComponentProps> = ({
 													id='name-input'
 													label='College'
 													required
+													{...field}
+													error={!!(meta.touched && meta.error)}
+													helperText={meta.touched ? meta.error : ''}
+													variant='outlined'
+													size='small'
+													className={classes.textField}
+													sx={{
+														'& .MuiOutlinedInput-root': {
+															'&:hover fieldset': {
+																borderColor: '#0E8388',
+															},
+														},
+													}}
+													InputLabelProps={{ className: `${classes.label}` }}
+												/>
+											)}
+										</Field>
+									</ListItem>
+									<ListItem>
+										<Field name='referralCode'>
+											{({
+												field,
+												meta,
+											}: FieldProps<typeof initialValues['referralCode']>) => (
+												<TextField
+													fullWidth
+													id='name-input'
+													label='Referral Code'
+													// required
 													{...field}
 													error={!!(meta.touched && meta.error)}
 													helperText={meta.touched ? meta.error : ''}

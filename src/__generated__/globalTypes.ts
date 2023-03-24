@@ -121,6 +121,7 @@ export interface UserInput {
   year?: number | null;
   city?: string | null;
   college?: string | null;
+  referralCode?: string | null
 }
 
 //==============================================================

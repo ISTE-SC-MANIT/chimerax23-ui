@@ -3,5 +3,6 @@
   "prettier.jsxSingleQuote": true,
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
-  "cmake.configureOnOpen": false
+  "cmake.configureOnOpen": false,
+  "dotenv.enableAutocloaking": false
 }
