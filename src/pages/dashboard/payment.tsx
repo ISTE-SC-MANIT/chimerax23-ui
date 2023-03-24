@@ -390,7 +390,7 @@ const Payment: React.FC<ComponentProps> = ({
 									},
 								}}
 							/>
-							<TextField
+							{/* <TextField
 								// fullWidth
 								value={referralCode}
 								onChange={(e) => {
@@ -409,7 +409,7 @@ const Payment: React.FC<ComponentProps> = ({
 										: "If you don't have any referral code , Please leave this field blank"
 								}
 								sx={{}}
-							/>
+							/> */}
 						</Box>
 						<Divider></Divider>
 						<Box>
