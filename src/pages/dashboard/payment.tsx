@@ -557,7 +557,7 @@ const Payment: React.FC<ComponentProps> = ({
 				<Box className={classes.modalroot}>
 					<Box>
 						<Image
-							src='/NewUI/paymentQR.jpeg'
+							src='/NewUI/payementQR.jpeg'
 							alt='logo'
 							width='200px'
 							height='200px'
