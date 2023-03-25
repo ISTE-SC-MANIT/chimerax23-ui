@@ -43,7 +43,7 @@ import {
 } from '../../__generated__/CreateOrderMutation';
 import { PayOrder } from '../../lib/mutations/PayOrderMutation';
 import { PayOrderMutation } from '../../__generated__/PayOrderMutation';
-
+import Confirm from '../confirm';
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		minHeight: '100vh',
@@ -218,7 +218,7 @@ const Payment: React.FC<ComponentProps> = ({
 	const [checked, setChecked] = React.useState(false);
 
 	const [modalVisible, setModalVisible] = React.useState(false);
-
+	// const [bypass, isBypass] = React.useState(falsee);
 	const router = useRouter();
 
 	React.useEffect(() => {
@@ -238,7 +238,9 @@ const Payment: React.FC<ComponentProps> = ({
 	const teamDetailResponse = useQuery<GetTeamDetailsQuery>(GetTeamDetails);
 
 	const [CreateOrderFunction, createOrderResponse] = useMutation(CreateOrder);
-
+	const handelGo = () => {
+		router.push('/confirm');
+	};
 	const [PayOrderFunction, payOrderResponse] = useMutation(PayOrder);
 	const loading = teamDetailResponse.loading;
 
@@ -568,9 +570,11 @@ const Payment: React.FC<ComponentProps> = ({
 						out soon. Enter <b>TEAM LEADER</b> email and
 						<b> team name </b> in UPI remarks message. Example <br />
 						Team Name: ABXY <br />
-						Email: tester@test.com
+						Email: tester@test.com <br />
+						if you have completed the payment please press <b>DONE</b> Button
 					</span>
 					<Button onClick={setModalView}>Close</Button>
+					<Button onClick={handelGo}>Done</Button>
 				</Box>
 			)}
 		</>
