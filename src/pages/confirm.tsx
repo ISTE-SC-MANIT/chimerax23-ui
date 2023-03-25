@@ -77,7 +77,7 @@ const Confirm: React.FC<ComponentProps> = ({
 						<h1>Application Recieved</h1>
 						Your Application will be processed in 4-5 Hours
 					</Typography>
-					<h4>You will recieve confimation mail after 4-5 hours</h4>
+					<h4>You will recieve confirmation mail after 4-5 hours</h4>
 
 					<Box className={classes.iconBox}>
 						<h3>Connect With Us</h3>
