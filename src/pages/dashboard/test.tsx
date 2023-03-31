@@ -56,6 +56,22 @@ const Test: React.FC<ComponentProps> = ({
 		}
 	};
 	React.useEffect(() => {
+		const timer = setInterval(() => {
+			const finaltime = new Date('April 01, 2023 2:26:00').getTime();
+			const endtime = new Date('April 01, 2023 13:00:00').getTime();
+			let currtime = new Date().getTime();
+			let timeleft = finaltime - currtime;
+			console.log(timeleft);
+			if (timeleft < 0 && currtime - endtime < 0) {
+				console.log('hi');
+				setButtonDisable(false);
+			}
+		}, 5);
+
+		return () => clearInterval(timer);
+	}, []);
+
+	React.useEffect(() => {
 		currTime();
 	}, []);
 
@@ -120,10 +136,11 @@ const Test: React.FC<ComponentProps> = ({
 				<Box marginBottom={4}>
 					<Button
 						onClick={handleStartQuiz}
-						// disabled={disableButton}
+						disabled={disableButton}
+						// enabled={disableButton}
 						variant='contained'
 						color='primary'
-						disabled
+						// {(!disableButton)&& disabled}
 					>
 						Start Quiz
 					</Button>
