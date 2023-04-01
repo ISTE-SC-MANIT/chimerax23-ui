@@ -191,7 +191,7 @@ const Instructions: React.FC<Props> = ({
 											IST.
 										</b>{' '}
 										The button will not be enabled again. Hence, all
-										participants must start the quiz by 4:05 pm IST.{' '}
+										participants must start the quiz by 12:10 pm IST.{' '}
 									</ListItemText>
 								</ListItem>{' '}
 								<ListItem>
