@@ -267,6 +267,13 @@ const Instructions: React.FC<Props> = ({
 								</ListItem>
 								<ListItem>
 									<ListItemText>
+										14{')'} For questions that have multiple options i.e. A B C
+										D etc. you need not use special symbols (like, or ;). Ex: If
+										the correct answer is A, C, and D you have to answer A C D.
+									</ListItemText>
+								</ListItem>
+								<ListItem>
+									<ListItemText>
 										<Grid
 											container
 											alignItems='center'
