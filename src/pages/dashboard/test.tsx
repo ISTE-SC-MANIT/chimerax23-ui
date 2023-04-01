@@ -57,8 +57,8 @@ const Test: React.FC<ComponentProps> = ({
 	};
 	React.useEffect(() => {
 		const timer = setInterval(() => {
-			const finaltime = new Date('April 01, 2023 12:05:00').getTime();
-			const endtime = new Date('April 01, 2023 12:20:00').getTime();
+			const finaltime = new Date('April 01, 2023 17:05:00').getTime();
+			const endtime = new Date('April 01, 2023 17:15:00').getTime();
 			let currtime = new Date().getTime();
 			let timeleft = finaltime - currtime;
 			console.log(timeleft);
@@ -136,7 +136,7 @@ const Test: React.FC<ComponentProps> = ({
 				<Box marginBottom={4}>
 					<Button
 						onClick={handleStartQuiz}
-						disabled={disableButton}
+						// disabled={disableButton}
 						// enabled={disableButton}
 						variant='contained'
 						color='primary'
