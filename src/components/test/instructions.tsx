@@ -223,7 +223,7 @@ const Instructions: React.FC<Props> = ({
 								</ListItem>
 								<ListItem>
 									<ListItemText>
-										7{')'} The total number of questions in the quiz is 30.
+										7{')'} The total number of questions in the quiz is 31.
 									</ListItemText>
 								</ListItem>
 								<ListItem>
